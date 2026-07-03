@@ -8,7 +8,7 @@
 - Path Traversal 可疑路徑存取
 - sqlmap、nmap、nikto 等掃描工具特徵
 
-這個專案的目的不是做攻擊工具，而是模擬 **SOC、資安維運、網路資安工程師** 在日常工作中，如何從 log 裡面找出可疑事件，並整理成報告。
+這個專案的目的不是做攻擊工具，而是模擬資安維運在日常工作中，如何從 log 裡面找出可疑事件，並整理成報告。
 
 ---
 
@@ -227,10 +227,6 @@ CI 可以簡單理解成：
 2026-07-04T10:08:00Z WARN 198.51.100.23 guest HTTP_REQUEST GET /products?id=1' OR '1'='1 Mozilla/5.0
 2026-07-04T10:10:00Z WARN 192.0.2.80 guest HTTP_REQUEST GET /wp-login.php sqlmap/1.7
 ```
-
-注意：
-
-這份 log 是假資料，不是真實公司資料。
 
 ---
 
@@ -912,98 +908,13 @@ JSON 輸出範例：
 
 ---
 
-## 12. 新手建議閱讀順序
-
-如果你是第一次看 Java 專案，建議照這個順序看：
-
-1. `README.md`
-2. `samples/security-events.log`
-3. `Main.java`
-4. `LogParser.java`
-5. `LogEntry.java`
-6. `SecurityRule.java`
-7. `RuleEngine.java`
-8. `BruteForceRule.java`
-9. `InjectionPatternRule.java`
-10. `SuspiciousToolRule.java`
-11. `DetectionResult.java`
-12. `ReportFormatter.java`
-13. `Severity.java`
-14. `LogParserTest.java`
-15. `RuleEngineTest.java`
-
-先理解整體流程，再看每一條規則的細節。
-
----
-
-## 13. 如何新增自己的偵測規則
-
-假設你想新增一條「黑名單 IP 偵測規則」，可以新增：
-
-```text
-BlocklistIpRule.java
-```
-
-並實作：
-
-```java
-public final class BlocklistIpRule implements SecurityRule {
-    @Override
-    public String name() {
-        return "Blocklist IP Detection";
-    }
-
-    @Override
-    public List<DetectionResult> analyze(List<LogEntry> entries) {
-        // 在這裡寫偵測邏輯
-    }
-}
-```
-
-然後在 `Main.java` 裡加入：
-
-```java
-rules.add(new BlocklistIpRule());
-```
-
-這就是 Rule Engine 架構的好處：
-
-```text
-新增規則時，不需要重寫整個專案，只要新增一個 Rule class，再放進 rules 清單。
-```
-
----
-
-## 14. 可以延伸的功能
-
-這些功能很適合後續分批 commit 到 GitHub，讓專案看起來有持續維護：
-
-- 加入 IP allowlist / blocklist
-- 加入 Risk Score 風險分數
-- 加入 CSV log parser
-- 加入 JSON log parser
-- 加入 CSV 報告輸出
-- 加入 HTML 報告輸出
-- 加入簡易 Web Dashboard
-- 加入 SQLite 儲存分析結果
-- 加入更多 OWASP Top 10 偵測規則
-- 加入 Dockerfile
-- 加入設定檔 `config.yml`
-- 加入單日 / 單 IP 統計摘要
-- 加入 404 爆量偵測
-- 加入敏感路徑存取偵測，例如 `/admin`, `/wp-admin`, `/.env`
-
----
-
-## 17. 專案注意事項
+## 12. 專案注意事項
 
 此專案只用於：
 
 - 防禦型資安學習
 - 日誌分析練習
-- Java 作品集展示
 - SOC Log Analysis Demo
-- 資安轉 RD 或資安工程師面試作品集
 
 此專案不包含：
 
@@ -1015,6 +926,6 @@ rules.add(new BlocklistIpRule());
 
 ---
 
-## 18. 專案英文簡介
+## 13. 專案英文簡介
 
 A defensive Java 8 cybersecurity portfolio project that analyzes security logs and detects suspicious activities such as brute force login attempts, web injection payloads, and suspicious scanner tool signatures. The project demonstrates Java CLI development, rule-based detection design, Maven build management, JUnit testing, and GitHub Actions CI.
