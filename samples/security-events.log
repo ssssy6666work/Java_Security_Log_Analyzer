@@ -1,0 +1,12 @@
+# timestamp level sourceIp username eventType message
+2026-07-04T10:00:00Z INFO 203.0.113.10 alice LOGIN_FAILED Invalid password
+2026-07-04T10:01:00Z INFO 203.0.113.10 alice LOGIN_FAILED Invalid password
+2026-07-04T10:02:00Z INFO 203.0.113.10 alice LOGIN_FAILED Invalid password
+2026-07-04T10:03:00Z INFO 203.0.113.10 alice LOGIN_FAILED Invalid password
+2026-07-04T10:04:00Z INFO 203.0.113.10 alice LOGIN_FAILED Invalid password
+2026-07-04T10:05:00Z INFO 203.0.113.10 alice LOGIN_SUCCESS Login successful after multiple failures
+2026-07-04T10:08:00Z WARN 198.51.100.23 guest HTTP_REQUEST GET /products?id=1' OR '1'='1 Mozilla/5.0
+2026-07-04T10:09:00Z WARN 198.51.100.24 guest HTTP_REQUEST GET /search?q=<script>alert(1)</script> Mozilla/5.0
+2026-07-04T10:10:00Z WARN 192.0.2.80 guest HTTP_REQUEST GET /wp-login.php sqlmap/1.7
+2026-07-04T10:11:00Z INFO 192.0.2.20 bob LOGIN_SUCCESS Login successful
+2026-07-04T10:30:00Z WARN 198.51.100.88 guest HTTP_REQUEST GET /admin Nessus scanner
