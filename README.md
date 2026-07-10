@@ -925,7 +925,3 @@ JSON 輸出範例：
 - 惡意程式功能
 
 ---
-
-## 13. 專案英文簡介
-
-A defensive Java 8 cybersecurity portfolio project that analyzes security logs and detects suspicious activities such as brute force login attempts, web injection payloads, and suspicious scanner tool signatures. The project demonstrates Java CLI development, rule-based detection design, Maven build management, JUnit testing, and GitHub Actions CI.
