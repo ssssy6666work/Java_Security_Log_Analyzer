@@ -1,6 +1,6 @@
-# Java Security Log Analyzer｜Java 8 資安日誌異常偵測器
+# Java Security Log Analyzer｜Java 資安日誌異常偵測器
 
-這是一個使用 **Java 8** 開發的防禦型資安作品集專案，用來分析安全事件日誌，並偵測常見的可疑行為，例如：
+這是一個使用 **Java** 開發的防禦型資安作品集專案，用來分析安全事件日誌，並偵測常見的可疑行為，例如：
 
 - 暴力破解登入 Brute Force Login
 - SQL Injection 可疑字串
@@ -48,7 +48,7 @@ ReportFormatter 產生 Markdown 或 JSON 報告
 
 ## 2. 專案特色
 
-- 使用 Java 8，符合當初學習基礎 Java 的版本
+- 使用 Java ，符合當初學習基礎 Java 的版本
 - 使用 Maven 管理編譯、測試與打包
 - 不依賴 Spring Boot 等大型框架，程式邏輯清楚
 - 使用 CLI 指令列方式執行，接近實務中的工具型程式
