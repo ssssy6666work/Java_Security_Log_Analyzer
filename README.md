@@ -48,7 +48,7 @@ ReportFormatter 產生 Markdown 或 JSON 報告
 
 ## 2. 專案特色
 
-- 使用 Java ，符合當初學習基礎 Java 的版本
+- 使用 Java，符合當初學習基礎 Java 的版本
 - 使用 Maven 管理編譯、測試與打包
 - 不依賴 Spring Boot 等大型框架，程式邏輯清楚
 - 使用 CLI 指令列方式執行，接近實務中的工具型程式
