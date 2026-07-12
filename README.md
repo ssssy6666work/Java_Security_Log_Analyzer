@@ -56,8 +56,6 @@ ReportFormatter 產生 Markdown 或 JSON 報告
 - 支援 Markdown 報告，適合人閱讀
 - 支援 JSON 報告，適合後續串接系統或前端 Dashboard
 - 內建範例安全日誌，可以直接執行測試
-- 內建 JUnit 單元測試
-- 內建 GitHub Actions，每次上傳到 GitHub 會自動跑測試
 
 ---
 
